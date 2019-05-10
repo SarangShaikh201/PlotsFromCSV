@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Upload Form</title>
+<style>
+    *{
+       margin: 0px;
+        padding: 0px;
+    }
+    .main{
+        background-color: #948c75;
+        width: 100%;
+
+
+    }
+    .inner{
+        background-color: #d9ceb2;
+        margin: 0px auto;
+        height: 100%;
+        width: 70%;
+
+    }
+    .button {
+          background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 25px;
+          margin: 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          border-radius: 12px;
+          -webkit-transition-duration: 0.4s; /* Safari */
+          transition-duration: 0.4s;
+    }
+    .button:hover {
+          background-color: green; /* Green */
+          color: white;
+           box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 10px 20px 0 rgba(0,0,0,0.19);
+    }
+
+
+</style>
+</head>
+<body>
+
+<div class="main">
+    <div class="inner">
+        <div style="height: 100px; width: 100%;"></div>
+        <div>
+            <center>
+                <div><h1>Upload New CSV File</h1></div><br><br>
+                <form method=post enctype=multipart/form-data>
+                    <h3>Select File to upload</h3><br><br>
+                  <input type=file name=file class="button"><br><br>
+                  <input type=submit value=Upload class="button">
+                </form>
+            </center>
+        </div>
+     </div>
+
+    </div>
+
+
+  </body>
+
+
+</html>

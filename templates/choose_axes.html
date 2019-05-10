@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Choose Axes</title>
+<style>
+    *{
+       margin: 0px;
+        padding: 0px;
+    }
+    .main{
+        background-color: #948c75;
+        width: 100%;
+
+
+    }
+    .inner{
+        background-color: #d9ceb2;
+        margin: 0px auto;
+        height: 100%;
+        width: 70%;
+
+    }
+    .button {
+          background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 25px;
+          margin: 20px;
+          /*width: 200px;*/
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          border-radius: 12px;
+          -webkit-transition-duration: 0.4s; /* Safari */
+          transition-duration: 0.4s;
+    }
+    .button:hover {
+          background-color: green; /* Green */
+          color: white;
+           box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 10px 20px 0 rgba(0,0,0,0.19);
+    }
+
+
+
+</style>
+</head>
+<body>
+
+<div class="main">
+    <div class="inner">
+        <div style="height: 100px; width: 100%;"></div>
+        <div>
+            <center>
+                <div><h1>Choose Columns for Plotting</h1></div><br><br>
+                <form action = "http://localhost:5000/visualize" method="POST">
+                         {% for item in col_1 %}
+                            <input type="checkbox" name="columns_names"value="{{item}}">{{item}}
+                         {% endfor %}
+                     <br><br>
+                    <input name="mybutton" type=submit value="Let's Plot" class="button">
+                </form>
+            </center>
+        </div>
+     </div>
+    </div>
+  </body>
+</html>
